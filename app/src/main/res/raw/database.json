@@ -1,0 +1,27 @@
+{
+  "questions": [
+    {
+      "question": "Question?",
+      "answers": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "correctAnswers": [
+        "First"
+      ],
+      "type": "SingleText"
+    },
+    {
+      "question": "2Question?",
+      "answers": [
+        "Test"
+      ],
+      "correctAnswers": [
+        "Test"
+      ],
+      "type": "InputText"
+    }
+  ]
+}
