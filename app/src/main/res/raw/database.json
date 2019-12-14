@@ -1,49 +1,110 @@
 {
   "questions": [
     {
-      "question": "Question1",
-      "answers": [
-        "First",
-        "Second",
-        "Third",
-        "Fourth"
-      ],
-      "correctAnswers": [
-        "First"
-      ],
-      "type": "MultiCheck"
-    },
-    {
-      "question": "Question2",
-      "answers": [
-        "First2",
-        "Second2",
-        "Third2",
-        "Fourth2"
-      ],
-      "correctAnswers": [
-        "First2"
-      ],
-      "type": "MultiCheck"
-    },
-    {
-      "question": "Question 3 input",
+      "question": "Paris is the capital of which country?",
       "answers": [],
       "correctAnswers": [
-        "Test"
+        "France"
       ],
       "type": "InputText"
     },
     {
-      "question": "Question4",
+      "question": "Canberra is the capital of which country?",
+      "answers": [],
+      "correctAnswers": [
+        "Australia"
+      ],
+      "type": "InputText"
+    },
+    {
+      "question": "Bangkok is the capital of which country?",
+      "answers": [],
+      "correctAnswers": [
+        "Thailand"
+      ],
+      "type": "InputText"
+    },
+    {
+      "question": "Tokyo is the capital of which country?",
+      "answers": [],
+      "correctAnswers": [
+        "Japan"
+      ],
+      "type": "InputText"
+    },
+    {
+      "question": "Warsaw is the capital of which country?",
+      "answers": [],
+      "correctAnswers": [
+        "Poland"
+      ],
+      "type": "InputText"
+    },
+    {
+      "question": "Buenos Aires is the capital of which country?",
+      "answers": [],
+      "correctAnswers": [
+        "Argentina"
+      ],
+      "type": "InputText"
+    },
+    {
+      "question": "Is Beijing the capital of China",
+      "answers": [],
+      "correctAnswers": [
+        "YES"
+      ],
+      "type": "SingleCheck"
+    },
+    {
+      "question": "Is Ottawa the capital of Canada",
+      "answers": [],
+      "correctAnswers": [
+        "YES"
+      ],
+      "type": "SingleCheck"
+    },
+    {
+      "question": "Is Manila the capital of Egypt",
+      "answers": [],
+      "correctAnswers": [
+        "NO"
+      ],
+      "type": "SingleCheck"
+    },
+    {
+      "question": "Is Vienna the capital of China",
+      "answers": [],
+      "correctAnswers": [
+        "NO"
+      ],
+      "type": "SingleCheck"
+    },
+    {
+      "question": "Select countries in Europe",
       "answers": [
-        "First2",
-        "Second2",
-        "Third2",
-        "Fourth2"
+        "Poland",
+        "Germany",
+        "Turkey",
+        "France"
       ],
       "correctAnswers": [
-        "First2"
+        "Poland",
+        "Germany",
+        "France"
+      ],
+      "type": "MultiCheck"
+    },
+    {
+      "question": "Select countries in Asia",
+      "answers": [
+        "China",
+        "Egypt",
+        "Turkey",
+        "France"
+      ],
+      "correctAnswers": [
+        "China"
       ],
       "type": "MultiCheck"
     }

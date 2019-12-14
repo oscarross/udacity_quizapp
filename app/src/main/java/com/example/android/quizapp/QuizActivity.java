@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.android.quizapp.Data.DatabaseStore;
 import com.example.android.quizapp.Data.Question;
@@ -15,6 +16,7 @@ import java.util.List;
 
 public class QuizActivity extends FragmentActivity implements
         MultiCheckFragment.MultiCheckFragmentListener,
+        SingleCheckFragment.SingleCheckFragmentListener,
         InputTextFragment.InputTextFragmentListener {
 
     private DatabaseStore databaseStore = new DatabaseStore();
@@ -71,10 +73,12 @@ public class QuizActivity extends FragmentActivity implements
             Question question = questions.get(currentQuestionIndex);
 
             Fragment fragment = QuestionsFragmentFactory.makeQuestionFragment(question);
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.fragment_container, fragment)
-                    .commit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.addToBackStack(null);
+
+            transaction.commit();
         }
     }
 

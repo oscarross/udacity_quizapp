@@ -55,7 +55,7 @@ public class InputTextFragment extends Fragment {
             listener = (InputTextFragmentListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+                    + " must implement InputTextFragmentListener");
         }
     }
 
