@@ -11,7 +11,7 @@
       "correctAnswers": [
         "First"
       ],
-      "type": "SingleText"
+      "type": "MultiText"
     },
     {
       "question": "2Question?",

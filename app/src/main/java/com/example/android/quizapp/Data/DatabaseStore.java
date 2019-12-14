@@ -12,7 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseStore {
-    List<Question> questions = null;
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
+    private List<Question> questions = null;
 
     public void loadData(Context context) {
         List<Question> items = new ArrayList<>();

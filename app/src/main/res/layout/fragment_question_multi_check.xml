@@ -3,13 +3,42 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0f0f">
+    android:orientation="vertical"
+    android:background="#ffffff">
 
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/multi_check_question_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
         android:textColor="#000000"
         android:textSize="22sp"/>
+
+    <CheckBox
+        android:id="@+id/multi_check_answear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/multi_check_answear_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/multi_check_answear_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/multi_check_answear_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/multi_check_submit_button"
+        android:text="Submit answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp" />
 
 </LinearLayout>
