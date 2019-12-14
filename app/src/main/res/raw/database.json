@@ -17,14 +17,6 @@
       "type": "InputText"
     },
     {
-      "question": "Bangkok is the capital of which country?",
-      "answers": [],
-      "correctAnswers": [
-        "Thailand"
-      ],
-      "type": "InputText"
-    },
-    {
       "question": "Tokyo is the capital of which country?",
       "answers": [],
       "correctAnswers": [
@@ -37,14 +29,6 @@
       "answers": [],
       "correctAnswers": [
         "Poland"
-      ],
-      "type": "InputText"
-    },
-    {
-      "question": "Buenos Aires is the capital of which country?",
-      "answers": [],
-      "correctAnswers": [
-        "Argentina"
       ],
       "type": "InputText"
     },
