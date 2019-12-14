@@ -1,8 +1,11 @@
 package com.example.android.quizapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -41,6 +44,7 @@ public final class QuizActivity extends FragmentActivity implements
     @Override
     public void didSubmit(boolean isCorrect) {
         List<Question> questions = databaseStore.getQuestions();
+        currentQuestionIndex++;
         if (questions.size() > currentQuestionIndex) {
             if (isCorrect) {
                 correctAnswerCounter++;
@@ -48,17 +52,27 @@ public final class QuizActivity extends FragmentActivity implements
                 wrongAnswerCounter++;
             }
 
-            currentQuestionIndex++;
             updateScoreTextView();
             showQuestion(questions);
         } else {
             String score = "Correct: " + correctAnswerCounter + " / Wrong: " + wrongAnswerCounter;
+
+            showToast(score);
+
             Intent intent = getIntent();
             intent.putExtra(MainActivity.SCORE, score);
             setResult(RESULT_OK, intent);
 
             finish();
         }
+    }
+
+    private void showToast(String score) {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, score, duration);
+        toast.show();
     }
 
     private void updateScoreTextView() {
