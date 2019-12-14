@@ -10,9 +10,9 @@ public class QuestionsFragmentFactory {
         switch (question.getType()) {
             case InputText:
                 return new InputTextFragment(question);
-            case MultiText:
+            case MultiCheck:
                 return new MultiCheckFragment(question);
-            case SingleText:
+            case SingleCheck:
                 return null;
         }
         return null;

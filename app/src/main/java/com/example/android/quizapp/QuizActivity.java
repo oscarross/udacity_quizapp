@@ -2,6 +2,7 @@ package com.example.android.quizapp;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -20,6 +21,7 @@ public class QuizActivity extends FragmentActivity implements
     private int correctAnswerCounter = 0;
     private int wrongAnswerCounter = 0;
     private int currentQuestionIndex = 0;
+    private TextView scoreTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,9 @@ public class QuizActivity extends FragmentActivity implements
         setContentView(R.layout.activity_quiz);
 
         databaseStore.loadData(getApplicationContext());
+
+        scoreTextView = findViewById(R.id.score_text_view);
+        updateScoreTextView();
 
         if (findViewById(R.id.fragment_container)!= null) {
             showQuestion(databaseStore.getQuestions());
@@ -49,10 +54,16 @@ public class QuizActivity extends FragmentActivity implements
 
         currentQuestionIndex++;
         if (questions.size() > currentQuestionIndex) {
+            updateScoreTextView();
             showQuestion(questions);
         } else {
 
         }
+    }
+
+    private void updateScoreTextView() {
+        String message = "Correct: " + correctAnswerCounter + " / Wrong: " + wrongAnswerCounter;
+        scoreTextView.setText(message);
     }
 
     private void showQuestion(List<Question> questions) {

@@ -11,7 +11,7 @@
       "correctAnswers": [
         "First"
       ],
-      "type": "MultiText"
+      "type": "MultiCheck"
     },
     {
       "question": "Question2",
@@ -24,7 +24,7 @@
       "correctAnswers": [
         "First2"
       ],
-      "type": "MultiText"
+      "type": "MultiCheck"
     },
     {
       "question": "Question 3 input",
@@ -45,7 +45,7 @@
       "correctAnswers": [
         "First2"
       ],
-      "type": "MultiText"
+      "type": "MultiCheck"
     }
   ]
 }

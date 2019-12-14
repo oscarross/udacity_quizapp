@@ -4,8 +4,8 @@ import java.util.List;
 
 public final class Question {
     public enum Type {
-        MultiText,
-        SingleText,
+        MultiCheck,
+        SingleCheck,
         InputText;
     }
 
