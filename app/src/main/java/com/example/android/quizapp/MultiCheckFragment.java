@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-
 import com.example.android.quizapp.Data.Question;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "question": "Question?",
+      "question": "Question1",
       "answers": [
         "First",
         "Second",
@@ -14,14 +14,38 @@
       "type": "MultiText"
     },
     {
-      "question": "2Question?",
+      "question": "Question2",
       "answers": [
-        "Test"
+        "First2",
+        "Second2",
+        "Third2",
+        "Fourth2"
       ],
+      "correctAnswers": [
+        "First2"
+      ],
+      "type": "MultiText"
+    },
+    {
+      "question": "Question 3 input",
+      "answers": [],
       "correctAnswers": [
         "Test"
       ],
       "type": "InputText"
+    },
+    {
+      "question": "Question4",
+      "answers": [
+        "First2",
+        "Second2",
+        "Third2",
+        "Fourth2"
+      ],
+      "correctAnswers": [
+        "First2"
+      ],
+      "type": "MultiText"
     }
   ]
 }
