@@ -13,7 +13,7 @@ import com.example.android.quizapp.Data.Question;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiCheckFragment extends Fragment {
+public final class MultiCheckFragment extends Fragment {
     private Question question;
     private Button submitButton;
     private CheckBox checkBox1;

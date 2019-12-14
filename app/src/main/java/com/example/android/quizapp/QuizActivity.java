@@ -1,20 +1,17 @@
 package com.example.android.quizapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.example.android.quizapp.Data.DatabaseStore;
 import com.example.android.quizapp.Data.Question;
 import com.example.android.quizapp.Helpers.QuestionsFragmentFactory;
-
 import java.util.List;
 
-public class QuizActivity extends FragmentActivity implements
+public final class QuizActivity extends FragmentActivity implements
         MultiCheckFragment.MultiCheckFragmentListener,
         SingleCheckFragment.SingleCheckFragmentListener,
         InputTextFragment.InputTextFragmentListener {
@@ -43,23 +40,24 @@ public class QuizActivity extends FragmentActivity implements
 
     @Override
     public void didSubmit(boolean isCorrect) {
-        Log.d("QuizActivity", "didSubmit");
-        Log.d("QuizActivity", String.valueOf(isCorrect));
-
-        if (isCorrect) {
-            correctAnswerCounter++;
-        } else {
-            wrongAnswerCounter++;
-        }
-
         List<Question> questions = databaseStore.getQuestions();
-
-        currentQuestionIndex++;
         if (questions.size() > currentQuestionIndex) {
+            if (isCorrect) {
+                correctAnswerCounter++;
+            } else {
+                wrongAnswerCounter++;
+            }
+
+            currentQuestionIndex++;
             updateScoreTextView();
             showQuestion(questions);
         } else {
+            String score = "Correct: " + correctAnswerCounter + " / Wrong: " + wrongAnswerCounter;
+            Intent intent = getIntent();
+            intent.putExtra(MainActivity.SCORE, score);
+            setResult(RESULT_OK, intent);
 
+            finish();
         }
     }
 

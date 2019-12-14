@@ -24,5 +24,12 @@
             android:padding="20dp"
             android:onClick="startQuiz"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="#585858"
+            android:id="@+id/main_score_text_view"/>
+
     </LinearLayout>
 </ScrollView>

@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.example.android.quizapp.Data.Question;
 
-public class InputTextFragment extends Fragment {
+public final class InputTextFragment extends Fragment {
     private Question question;
     private Button submitButton;
     private EditText answerEditText;
